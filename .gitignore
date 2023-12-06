@@ -1,0 +1,4 @@
+.venv/
+enigmashuffle/backups/
+__pycache__/
+
