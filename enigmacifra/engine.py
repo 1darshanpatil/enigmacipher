@@ -1,4 +1,8 @@
 import json
+from enigmacifra.defaultRotor import ROTORS
+
+Rotor_lst = ROTORS
+
 
 def rotate_single_dict(x, dc):
     """Rotates the given dictionary 'dc' by 'x' positions."""
@@ -12,7 +16,7 @@ def rotate_single_dict(x, dc):
 def Encrypting_package(pin, rotor_list):
     """Encrypt a package using a PIN and a list of rotors."""
     package_encrypted = []
-    for i in range(6):
+    for i in range(8):
         pin_digit = pin[i]
         package_encrypted.append(rotate_single_dict(pin_digit, rotor_list[i]))
     return package_encrypted
@@ -35,7 +39,7 @@ def get_key_from_value(dc, value):
 
 def unpassing(pin_encrypted_list, char):
     """Reverse the transformation process of a character using the encrypted PIN list."""
-    for i in range(1, 7):
+    for i in range(1, 9):
         char = get_key_from_value(pin_encrypted_list[-i], char)
     return char
 
@@ -50,7 +54,7 @@ def updating(pin_encrypted_list, encrypt=True):
     Update the PIN Encrypted List (PEL) for encryption or decryption.
     By default, it is set for encryption."""
     direction = 1 if encrypt else -1
-    pin = [direction] * 6
+    pin = [direction] * 8
     return Encrypting_package(pin, pin_encrypted_list)
 
 
@@ -72,11 +76,13 @@ def process_d(PEL, passwordE):
     return password
 
 
+Rotor_lst = ROTORS
+
 """The above rotor list is to be well backed-up and should never be disturbed as it has contains the shuffled rotors"""
 if __name__ == "__main__":
-    # Now, We'll ask for the 6-digit PIN
+    # Now, We'll ask for the 8-digit PIN
 
-    pin = input("Enter your 6-digit PIN to encrypt/decrypt the password: ")
+    pin = input("Enter your 8-digit PIN to encrypt/decrypt the password: ")
     if len(pin) == 8 and pin.isnumeric():
         PIN = [int(i) for i in pin]
         PEL = Encrypting_package(PIN, Rotor_lst)
@@ -98,7 +104,7 @@ if __name__ == "__main__":
         else:
             if len(pin) == 1:
                 print(f"The above PIN is of 1-digit only")
-            elif len(pin) < 6:
+            elif len(pin) < 8:
                 print(f"The above PIN is of only {len(pin)}-digits")
             else:
                 print(f"The above PIN is of {len(pin)}-digits")
