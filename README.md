@@ -14,7 +14,7 @@ A Python package that simulates the encryption and decryption mechanisms of an E
 To install EnigmaCipher, simply run:
 
 ```bash
-pip install enigmacifra
+$ pip install enigmacifra
 ```
 
 Verify the installation by checking the version: 
@@ -32,7 +32,7 @@ The EnigmaCipher package can be used via the command line.
 To shuffle rotors:
 
 ```bash
-$ enigma shuffle
+$ enigma get-new-rotors
 ```
 
 To encrypt a message:
