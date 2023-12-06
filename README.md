@@ -1,3 +1,6 @@
+![enigma-cipher](https://github.com/1darshanpatil/enigmacipher/assets/72539638/7ed29d47-177b-4c86-bc12-c3517dd9a67c)
+
+
 # EnigmaCipher
 
 A Python package that simulates the encryption and decryption mechanisms of an Enigma machine with PIN protection.
@@ -18,6 +21,7 @@ Verify the installation by checking the version:
 ```bash
 $ enigma --version
 ```
+
 ## Usage
 
 The EnigmaCipher package can be used via the command line.
