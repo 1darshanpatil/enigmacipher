@@ -80,6 +80,7 @@ def main():
         print("Your encrypted message is: ", encrypted_message)
 
     elif args.command == "decrypt":
+        Rotor_lst = ROTORS
         pin = getpass.getpass("Enter 8-digit PIN to decrypt your message: ")
         if len(pin) != 8 or not pin.isnumeric():
             print("Invalid PIN. Please enter a 8-digit numeric PIN.")
