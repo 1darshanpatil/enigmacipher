@@ -14,7 +14,7 @@ A Python package that simulates the encryption and decryption mechanisms of an E
 To install EnigmaCipher, simply run:
 
 ```bash
-pip install enigmacipher
+pip install enigmacifra
 ```
 
 Verify the installation by checking the version: 

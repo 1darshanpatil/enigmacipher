@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
-from enigmacipher import __version__
+from enigmacifra import __version__
 
 with open("README.md", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name='enigmacipher',  
+    name='enigmacifra',  
     version=__version__,
     author="Darshan P.",
     author_email="drshnp@outlook.com",
@@ -15,11 +15,11 @@ setup(
     url="https://github.com/1darshanpatil/enigmacipher", 
     packages=find_packages(),
     package_data={
-        'enigmacipher': ['defaultRotor.txt'],
+        'enigmacifra': ['defaultRotor.txt'],
     },
     entry_points={
         "console_scripts": [
-            "enigma=enigmacipher.cliengine:main",
+            "enigma=enigmacifra.cliengine:main",
         ]
     },
     classifiers=[

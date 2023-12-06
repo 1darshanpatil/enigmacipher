@@ -3,7 +3,7 @@ import argparse
 from .engine import *
 import getpass
 from .mshuffle import *
-from enigmacipher import __version__
+from enigmacifra import __version__
 from .defaultRotor import ROTORS
 
 def main():
