@@ -89,4 +89,4 @@ if __name__ == "__main__":
     rotor_file = "defaultRotor.py"
     backup_default_rotor()
     # Optionally, create new rotors. Uncomment the next line and specify the count to activate this feature.
-    # create_rotors(rotor_file, count)
+    # create_rotors(count)
